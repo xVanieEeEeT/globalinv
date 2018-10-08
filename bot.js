@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Global. || Links","https://twitch.tv//9ivv")
+  client.user.setActivity("Global. || Invite","https://twitch.tv//9ivv")
     console.log('')
     console.log('')
     console.log('╔[════════════════════════════════════════════════════════════════]╗')
