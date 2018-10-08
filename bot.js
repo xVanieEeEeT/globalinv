@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '%';
 
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Global. || Invite","https://twitch.tv//9ivv")
+  client.user.setGame("Global. || Invite", "https://twitch.tv//9ivv")
     console.log('')
     console.log('')
     console.log('╔[════════════════════════════════════════════════════════════════]╗')
@@ -26,6 +27,52 @@ client.on('ready', () => {
     console.log('╚[════════════]╝')
     console.log('')
     console.log('')
+  });
+
+
+  client.on('message', message => {
+    var args = message.content.split(' ').slice(1);
+    var argresult = args.join(' ');
+    if (message.author.id !== "410778583682777098") return;
+  
+  
+    if (message.content.startsWith(prefix + 'setwatch')) {
+    client.user.setActivity(argresult, {type: 'WATCHING'})
+       console.log('test' + argresult);
+      message.channel.sendMessage(`Watch Now: **${argresult}**`)
+  }
+  
+  
+    if (message.content.startsWith(prefix + 'setlis')) {
+    client.user.setActivity(argresult, {type: 'LISTENING'})
+       console.log('test' + argresult);
+      message.channel.sendMessage(`LISTENING Now: **${argresult}**`)
+  }
+  
+  
+  if (message.content.startsWith(prefix + 'setname')) {
+    client.user.setUsername(argresult).then
+        message.channel.sendMessage(`تم تغيير الاسم بنجاح الى :white_check_mark:  **${argresult}**`)
+  }
+  
+  if (message.content.startsWith(prefix + 'setavatar')) {
+    client.user.setAvatar(argresult);
+     message.channel.sendMessage(`تم تغيير الصورة بنجاح الى :white_check_mark:  **${argresult}**`);
+  }
+  
+  if (message.content.startsWith(prefix + 'setstream')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/9ivv");
+       console.log('test' + argresult);
+      message.channel.sendMessage(`Streaming: **${argresult}**`)
+  }
+  if (message.content.startsWith(prefix + 'setplay')) {
+    client.user.setGame(argresult);
+       console.log('test' + argresult);
+      message.channel.sendMessage(`Playing: **${argresult}**`)
+  }
+  
+  
+  
   });
 
 
