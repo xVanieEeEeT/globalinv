@@ -207,7 +207,6 @@ client.on("guildMemberAdd", (member) => {
 
 
 client.on('message',message =>{
-    var prefix = "$";
     if(message.content.startsWith(prefix + 'top')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
@@ -226,7 +225,7 @@ client.on('message',message =>{
   var embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://media.discordapp.net/attachments/477570106755383307/479229377037598720/22713057_151850495552450_709700562_o.jpg?width=201&height=201")
+  .setThumbnail(`${message.author.avatarURL}`)
            message.channel.send({ embed: embed });
    
   });
