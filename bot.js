@@ -5,7 +5,7 @@ const prefix = '%';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame("Global. || Invite", "https://twitch.tv//9ivv")
+  client.user.setGame("United. || Invite", "https://twitch.tv//9ivv")
     console.log('')
     console.log('')
     console.log('╔[════════════════════════════════════════════════════════════════]╗')
