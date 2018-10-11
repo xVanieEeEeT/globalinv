@@ -149,7 +149,7 @@ client.on("ready", () => {
 });
  
  client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("499077070018707456");
+    let channel = member.guild.channels.get("500028926492672001");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -178,7 +178,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("499077070018707456");
+    let channel = member.guild.channels.get("500028926492672001");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
